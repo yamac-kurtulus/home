@@ -3,7 +3,7 @@ export default {
             [
                 '@snowpack/plugin-run-script',
                 {
-                    cmd: '',
+                    cmd: 'echo "Nothing to run on build"',
                     watch: 'npx tailwind-config-viewer -p 3001 -o'
                 },
             ],
