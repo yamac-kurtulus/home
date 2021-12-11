@@ -1,15 +1,17 @@
 ---
 import Navbar from '../components/Navbar.vue'
 const { title } = Astro.props
+const { metaDescription } = Astro.props
 ---
 
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={metaDescription} />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')} />
     <title>
       {title}
     </title>
@@ -17,9 +19,9 @@ const { title } = Astro.props
 
   <body>
     <!-- slot: your page content will be injected here. -->
-    <Navbar />
-    <div class=" bg-indigo-400 min-h-screen">
-      <div class="container mx-auto flex">
+    <div class="min-h-screen">
+      <div class="container flex mx-auto">
+        <Navbar />
         <slot />
       </div>
     </div>

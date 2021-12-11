@@ -1,0 +1,4 @@
+{
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "headwind.prependCustomClasses": true
+}
