@@ -1,5 +1,6 @@
 ---
-import Navbar from '../components/Navbar.vue'
+//import Navbar from '../components/Navbar.vue'
+import Navbar2 from '../components/Navbar.astro'
 const { title } = Astro.props
 const { metaDescription } = Astro.props
 const currentPage = Astro.request.url.pathname
@@ -22,7 +23,7 @@ const currentPage = Astro.request.url.pathname
     <!-- slot: your page content will be injected here. -->
 
     <div class="h-screen bg-gray-900">
-      <Navbar currentPage={currentPage.split('/')[1]} />
+      <Navbar2 currentPage={'/' + currentPage.split('/')[1]} />
       <!-- Only send the level-1 directory -->
       <slot />
     </div>
