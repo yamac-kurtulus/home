@@ -8,7 +8,7 @@ const currentPage = Astro.request.url.pathname
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={metaDescription} />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -21,10 +21,9 @@ const currentPage = Astro.request.url.pathname
   <body>
     <!-- slot: your page content will be injected here. -->
 
-    <div>
+    <div class="h-screen bg-gray-900">
       <Navbar currentPage={currentPage.split('/')[1]} />
       <!-- Only send the level-1 directory -->
-
       <slot />
     </div>
   </body>
