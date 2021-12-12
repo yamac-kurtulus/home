@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar.vue'
 const { title } = Astro.props
 const { metaDescription } = Astro.props
+const currentPage = Astro.request.url.pathname
 ---
 
 <html>
@@ -19,11 +20,11 @@ const { metaDescription } = Astro.props
 
   <body>
     <!-- slot: your page content will be injected here. -->
-    <div class="min-h-screen">
-      <div class="container flex mx-auto">
-        <Navbar />
-        <slot />
-      </div>
+
+    <div class="h-screen bg-black">
+      <Navbar currentPage={currentPage.slice(1)} />
+      <!-- strip leading slash -->
+      <slot />
     </div>
   </body>
 </html>
