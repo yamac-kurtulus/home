@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="container flex m-auto mb-4 text-pink-600">
+    <div class="container flex h-screen m-auto mb-4 text-pink-600 bg-black">
       <div id="homelink" class="w-1/2 m-8 flex-initialize">
         <a href="/" :class="isActive('/')">Home</a>
       </div>

@@ -21,9 +21,10 @@ const currentPage = Astro.request.url.pathname
   <body>
     <!-- slot: your page content will be injected here. -->
 
-    <div class="h-screen bg-black">
-      <Navbar currentPage={currentPage.slice(1)} />
-      <!-- strip leading slash -->
+    <div>
+      <Navbar currentPage={currentPage.split('/')[1]} />
+      <!-- Only send the level-1 directory -->
+
       <slot />
     </div>
   </body>
