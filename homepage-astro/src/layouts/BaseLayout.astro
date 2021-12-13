@@ -1,31 +1,23 @@
 ---
-//import Navbar from '../components/Navbar.vue'
-import Navbar2 from '../components/Navbar.astro'
+import HeadLayout from './HeadLayout.astro'
+import Navbar from '../components/Navbar/Navbar.vue'
+//import Navbar2 from '../components/Navbar.astro'
+const currentPage = Astro.request.url.pathname
 const { title } = Astro.props
 const { metaDescription } = Astro.props
-const currentPage = Astro.request.url.pathname
 ---
 
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={metaDescription} />
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')} />
-    <title>
-      {title}
-    </title>
-  </head>
-
+<head>
+    <HeadLayout />
+    </head>
   <body>
+  
     <!-- slot: your page content will be injected here. -->
-
     <div class="h-screen bg-gray-900">
-      <Navbar2 currentPage={'/' + currentPage.split('/')[1]} />
+      <Navbar client:visible currentPage={currentPage.split('/')[1]}/>
       <!-- Only send the level-1 directory -->
       <slot />
     </div>
   </body>
-</html>
+</html> 
