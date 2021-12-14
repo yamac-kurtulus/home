@@ -17,7 +17,7 @@ const { metaDescription } = Astro.props
     <div class="h-screen bg-gray-900">
       <Navbar client:visible currentPage={currentPage.split('/')[1]}/>
       <!-- Only send the level-1 directory -->
-      <slot />
+      <slot /> 
     </div>
   </body>
 </html> 

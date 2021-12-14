@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav v-cloak>
     <div class="container m-auto">
       <div class="flex">
         <div id="homelink" class="container flex flex-initial w-1/2 m-4 mb-2">
