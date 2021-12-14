@@ -29,6 +29,3 @@
   @apply px-2 py-1 font-bold bg-blue-600 rounded;
 }
 
-[v-cloak] {
-  display: none;
-}
