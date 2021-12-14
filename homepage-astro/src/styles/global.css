@@ -26,5 +26,5 @@
 @tailwind utilities;
 
 .btn {
-  @apply font-bold py-1 px-2 rounded bg-blue-600;
+  @apply px-2 py-1 font-bold bg-blue-600 rounded;
 }
