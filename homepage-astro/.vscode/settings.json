@@ -1,4 +1,6 @@
 {
   "prettier.htmlWhitespaceSensitivity": "ignore",
-  "headwind.prependCustomClasses": true
+  "headwind.prependCustomClasses": true,
+  "prettier.documentSelectors": ["**/*.astro"],
+  "prettier.configPath": "./.prettierrc.json"
 }

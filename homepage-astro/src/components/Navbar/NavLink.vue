@@ -1,6 +1,6 @@
 <template>
   <button>
-    <button class="hover:scale-125 transform-gpu drop-shadow-sm transition-all bg-indigo-800 rounded">
+    <button class="hover:scale-125 transform-gpu transition-all">
       <a :href="href" :class="getActiveState() + ' m-1'">{{ label }}</a>
     </button>
   </button>
@@ -10,10 +10,10 @@
 
 <style lang="scss">
 .active {
-  @apply text-green-500 font-bold text-lg;
+  @apply text-main-red font-bold text-lg;
 }
 .inactive {
-  @apply text-pink-600 text-lg;
+  @apply text-main-light-blue text-lg;
 }
 </style>
 

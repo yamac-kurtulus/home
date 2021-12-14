@@ -8,15 +8,16 @@ const { metaDescription } = Astro.props
 ---
 
 <html>
-<head>
-    <HeadLayout />
-    </head>
+  <head>
+    <HeadLayout {title} {metaDescription} />
+  </head>
   <body>
-  
-    <!-- slot: your page content will be injected here. -->
-    <div class="h-screen bg-gray-900">
-      <Navbar client:visible currentPage={currentPage.split('/')[1]}/>
-      <slot /> 
+    <div class="h-min-h-screen mx-auto bg-gray-900">
+      <Navbar client:visible currentPage={currentPage.split('/')[1]} />
+      <div class="xl:max-w-screen-lg lg:max-w-screen-md container mx-auto">
+        <!-- slot: your page content will be injected here. -->
+        <slot />
+      </div>
     </div>
   </body>
-</html> 
+</html>
