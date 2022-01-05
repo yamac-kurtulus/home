@@ -1,7 +1,7 @@
 <template>
   <button>
-    <button class="hover:scale-125 transform-gpu transition-all">
-      <a :href="href" :class="getActiveState() + ' m-1'">{{ label }}</a>
+    <button class="transition-all hover:scale-150 transform-gpu">
+      <a :href="href" :class="getActiveState()">{{ label }}</a>
     </button>
   </button>
 </template>

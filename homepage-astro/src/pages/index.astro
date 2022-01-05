@@ -1,12 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import Card from '../components/Card/Card.vue'
 const title = '~/'
 const metaDescription = 'Yo'
 ---
 
 <BaseLayout {title} {metaDescription}>
-  <div class="bg-main-light-blue outline-purple-600 outline-8 container mx-auto rounded-md shadow-lg outline-none">
-    <div class="text-main-purple auto text-9xl p-4 text-center">HI!</div>
-    <div class="text-main-purple auto p-4 pb-12 text-5xl text-center">I am Yamaç</div>
+  <div class="container mx-auto rounded-md shadow-lg outline-none text-main-purple outline-8">
+    <div class="w-auto py-1 text-3xl text-left">Hi! I am</div>
+    <div class="w-auto py-1 text-left text-7xl">Yamaç Kurtuluş</div>
+    <div class="py-1 text-3xl text-left">I make systems go brrr!</div>
+    <div class="flex"></div>
   </div>
+
+  <Card class="pt-8 text-main-purple">I am a computer scientist with a diverse number of interests.</Card>
 </BaseLayout>

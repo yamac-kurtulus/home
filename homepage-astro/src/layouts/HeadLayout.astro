@@ -1,13 +1,13 @@
 ---
 //This is the common head on every page.
-const { title } = Astro.props
-const { metaDescription } = Astro.props
+const { title, metaDescription } = Astro.props
+const canonicalUrl = Astro.request.canonicalURL
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content={metaDescription} />
-
+<link rel="canonical" href={canonicalUrl} />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="stylesheet" href={Astro.resolve('../styles/global.css')} />
 <title>

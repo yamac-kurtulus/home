@@ -7,15 +7,17 @@ const { title } = Astro.props
 const { metaDescription } = Astro.props
 ---
 
-<html>
-  <head>
+<html
+  ><head>
     <HeadLayout {title} {metaDescription} />
   </head>
   <body>
-    <div class="h-max min-h-screen mx-auto bg-gray-900">
+    <div class="min-h-screen mx-auto bg-gray-900 h-max text-main-light-blue">
       <Navbar client:visible currentPage={currentPage.split('/')[1]} />
-      <div class="xl:max-w-screen-lg lg:max-w-screen-md container mx-auto">
-        <!-- slot: your page content will be injected here. -->
+
+      <div
+        class="container px-4 py-32 mx-auto scroll-py-32 lg:px-0 xl:max-w-screen-lg lg:max-w-screen-md md:max-w-screen-sm"
+      >
         <slot />
       </div>
     </div>

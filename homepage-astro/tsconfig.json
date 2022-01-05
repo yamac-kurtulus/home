@@ -1,4 +1,3 @@
 {
-  "compilerOptions": { "moduleResolution": "node" },
-  "include": ["file.ts"] //include this only for eslint
+  "compilerOptions": { "moduleResolution": "node" }
 }

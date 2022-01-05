@@ -1,0 +1,12 @@
+---
+import BaseLayout from './BaseLayout.astro'
+const { content } = Astro.props;
+---
+
+<BaseLayout {content.title} {content.metaDescription}>
+  <div class="mx-auto prose shadow-2xl rounded-2xl bg-main-light-blue shadow-main-purple">
+  <div class="p-6">
+    <slot />
+    </div>
+  </div>
+</BaseLayout>
