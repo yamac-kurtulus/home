@@ -1,26 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogCard from '../../components/Card/BlogCard.vue'
-import fs from 'fs'
 const title = '~$ markdown ./rant.md'
 const metaDescription = 'YoYo'
 const posts = Astro.fetchContent('./*.md')
-
-function prepareSinglePost(post) {
-  return {
-    url: post.url,
-    heroImg: post.heroImg,
-    title: post.title,
-    summary: post.metaDescription,
-    date: getLastModification(post.file),
-  }
-}
-
-function getLastModification(file) {
-  return fs.statSync(file).mtime
-}
-
-const previews = posts.map(prepareSinglePost).sort((a, b) => (a.date < b.date ? 1 : -1))
+const previews = posts.sort((a, b) => (a.date < b.date ? 1 : -1))
 ---
 
 <BaseLayout {title} {metaDescription}>

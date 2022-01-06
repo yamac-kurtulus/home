@@ -1,12 +1,30 @@
 ---
 import BaseLayout from './BaseLayout.astro'
-const { content } = Astro.props;
+import { format } from 'date-fns'
+
+const { content } = Astro.props
+console.log(import.meta.url)
+const date = format(new Date(content.date), 'dd/MM/YYY')
 ---
 
-<BaseLayout {content.title} {content.metaDescription}>
-  <div class="mx-auto prose shadow-2xl rounded-2xl bg-main-light-blue shadow-main-purple">
-  <div class="p-6">
-    <slot />
+<BaseLayout title={content.title} metaDescription={content.metaDescription}>
+  <div class="mx-auto shadow-xl rounded-2xl bg-main-light-blue shadow-main-purple">
+    <div class="w-full">
+      <img src={content.heroImg} alt={content.heroImgAlt} class="object-cover w-full rounded-t-2xl" />
+    </div>
+    <div class="px-8 py-2 italic text-right text-black">{date}</div>
+    <div class="px-4 pb-4 prose-sm prose text-black md:prose-md prose-emerald lg:prose-lg">
+      <slot />
     </div>
   </div>
+  <!--Utterances for comments-->
+  <script
+    src="https://utteranc.es/client.js"
+    repo="yamac-kurtulus/home"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async
+  >
+  </script>
 </BaseLayout>
