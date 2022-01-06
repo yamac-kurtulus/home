@@ -24,7 +24,7 @@ export default {
       {
         remarkPlugins: [
           [
-            '@fec/remark-images',
+            '@fec/remark-images', //Generates images for different screen breaking points
             {
               loadingPolicy: 'lazy',
               srcDir: './public',

@@ -1,0 +1,24 @@
+---
+//Add Giscus (https://giscus.app) to pages. It is an alternative to disqus that allows
+//github discussions to work as comments. Using this mainly on blog posts.
+
+import { GISCUS_CONFIG } from '../../../site-config.ts'
+
+//const GISCUS_CONFIG = Astro.props
+---
+
+<div class="rounded-lg">
+  <script
+    src="https://giscus.app/client.js"
+    data-repo={GISCUS_CONFIG.repo}
+    data-repo-id={GISCUS_CONFIG.repoId}
+    data-category={GISCUS_CONFIG.category}
+    data-category-id={GISCUS_CONFIG.categoryId}
+    data-mapping={GISCUS_CONFIG.mapping}
+    data-reactions-enabled={GISCUS_CONFIG.reactionsEnabled}
+    data-emit-metadata={GISCUS_CONFIG.emitMetadata}
+    data-theme={GISCUS_CONFIG.theme}
+    data-lang={GISCUS_CONFIG.lang}
+    crossorigin={GISCUS_CONFIG.crossorigin}
+    async></script>
+</div>
