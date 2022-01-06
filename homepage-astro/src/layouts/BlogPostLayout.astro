@@ -8,9 +8,9 @@ const date = format(new Date(content.date), 'dd/MM/YYY')
 ---
 
 <BaseLayout title={content.title} metaDescription={content.metaDescription}>
-  <div class="mx-auto overflow-hidden bg-main-light-blue rounded-2xl">
+  <div class="overflow-hidden bg-main-light-blue rounded-3xl t-1 bg-clip-padding">
     <div class="w-full">
-      <img src={content.heroImg} alt={content.heroImgAlt} class="object-cover w-full" />
+      <img src={content.heroImg} alt={content.heroImgAlt} class="object-fill" width="640" height="360" />
     </div>
     <div class="px-8 py-2 italic text-right text-black">{date}</div>
     <div class="px-4 pb-4 prose-sm prose text-black md:prose-md prose-emerald lg:prose-lg">
